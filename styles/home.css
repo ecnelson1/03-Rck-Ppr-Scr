@@ -1,1 +1,31 @@
-/* add home page styles here */
+body{
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr 1fr;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+label > img {
+    height: 100px;
+    width: 100px;
+}
+
+.userButtons {
+display: grid;
+justify-content: center;
+align-items: center;
+}
+
+.buttons {
+    height: 40px;
+    width: 150px;
+}
+
+.userInfo {
+    font-size: 20px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    color: chartreuse;
+}
