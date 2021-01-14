@@ -10,3 +10,10 @@ export function getRandomThrow(compSelect){
     }
     else return 'scissors';
 }
+export function didUserWin(player, computer){
+    if ((player === 'Rock' && computer === 'scissors') || (player === 'Paper' && computer === 'rock') || (player === 'Scissors' && computer === 'paper')){        
+        return 'You Won!';}
+    else if ((player === 'Rock' && computer === 'paper') || (player === 'Paper' && computer === 'scissors') || (player === 'Scissors' && computer === 'rock')){
+        return 'You Lost!';}
+    else { return 'Draw!';}
+}
