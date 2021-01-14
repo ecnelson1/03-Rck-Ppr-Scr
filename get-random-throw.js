@@ -2,10 +2,10 @@
 // const compThrow = Math.ceil(Math.random() * 3);
 //     -comparing user selection to computer choice
 export function getRandomThrow(compSelect){
-    if (compSelect === 0){
+    if (compSelect === 1){
         return 'rock';
     }
-    else if (compSelect === 1){
+    else if (compSelect === 2){
         return 'paper';
     }
     else return 'scissors';
