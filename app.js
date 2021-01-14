@@ -17,32 +17,45 @@ let resets = 0;
 
 throwButton.addEventListener('click', () => {
     ++total;
-    totalMatchCount.textContent = `Total Matches = ${total}`;
-    userLosses.textContent = `Total Losses = ${losses}`;
-    userWins.textContent = `Total Wins = ${wins}`;
     const compThrow = Math.round(Math.random() * 3);
+
     const userSelection = document.querySelector('input[type="radio"]:checked');
     const userThrow = userSelection.value;
     const compRPS = getRandomThrow(compThrow);
     const outcome = didUserWin(userThrow, compRPS);
+    userFBMDisp.textContent = `${outcome}`;
+
+    messagesOutcome(throwButton);
+
     if (outcome === 'You Won!'){
         ++wins;}
     else if (outcome === 'You Lost!'){
         ++losses;
     }
-    userFBMDisp.textContent = `${outcome}`;
-    userWins.textContent = `Matches Won = ${wins}`;
-    userLosses.textContent = `Matches Lost = ${losses}`;
-    totalMatchCount.textContent = `Total Matches = ${total}`;
 });
+
 resetButton.addEventListener('click', () => {
     wins = 0;
     losses = 0;
     total = 0;
     ++resets;
-    userFBMDisp.textContent = `YOU'VE RESET!`;
-    userWins.textContent = `Matches Won = ${wins}`;
-    userLosses.textContent = `Matches Lost = ${losses}`;
-    totalMatchCount.textContent = `Total Matches = ${total}`;
-    resetCounts.textContent = `You have rest ${resets} times`;
+    messagesOutcome(resetButton);
+    
 });
+
+function messagesOutcome(buttonElement) {
+
+    if (buttonElement === throwButton){
+        userWins.textContent = `Matches Won = ${wins}`;
+        userLosses.textContent = `Matches Lost = ${losses}`;
+        totalMatchCount.textContent = `Total Matches = ${total}`;
+    }
+    else if (buttonElement === resetButton) {
+        userFBMDisp.textContent = `YOU'VE RESET!`;
+        userWins.textContent = `Matches Won = ${wins}`;
+        userLosses.textContent = `Matches Lost = ${losses}`;
+        totalMatchCount.textContent = `Total Matches = ${total}`;
+        resetCounts.textContent = `You have rest ${resets} times`;
+    }
+    
+}
