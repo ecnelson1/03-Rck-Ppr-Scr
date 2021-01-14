@@ -30,21 +30,6 @@ main {
     margin-bottom: calc(var(--footer-height));
 }
 
-/* section {
-    background-color: var(--color5);
-    width: 1000px;
-    max-width: 80%;
-    display: flex; */
-    /* flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
-    margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
-    border: solid 2px var(--color1); */ */
-}
-
 header {
     display: flex;
     justify-content: flex-end;
@@ -69,10 +54,6 @@ h2 {
 .gutter-right {
     margin-right: 20px;
 }
-
-/* .main-logo {
-    animation: pulse 5s infinite ease-in-out;
-} */
 
 header img {
     height: var(--header-height);
@@ -99,21 +80,3 @@ footer {
     box-shadow: var(--shadow);
 }
   
-  @keyframes pulse {
-    20% {
-      transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
-    }
-
-    40% {
-        transform: rotate3d(10, 10, -10, 50deg) scale(1);
-    }
-
-    60% {
-        transform: rotate3d(-10, 10, 10, 50deg) scale(1.2);
-      }
-
-    80% {
-        transform: rotate3d(10, 10, 10, 50deg) scale(1);
-    }
-
-  }
