@@ -34,4 +34,4 @@ Stretch goal add betting:
         - if win multiply by two then add back to money
         - if loss subtract bet amount from user money
     set display for bet outcome 
-    
+
