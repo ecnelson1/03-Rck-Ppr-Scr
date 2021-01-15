@@ -7,6 +7,9 @@ const resetCounts = document.getElementById('user-resets-disp');
 const userWins = document.getElementById('user-wins-disp');
 const userFBMDisp = document.getElementById('user-FBM');
 
+const userBet = document.getElementById('user-bet');
+const userCurrency = document.getElementById('user-currency');
+
 import { getRandomThrow, didUserWin } from './get-random-throw.js';
 // initialize state
 let wins = 0;
