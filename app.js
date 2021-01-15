@@ -52,6 +52,7 @@ throwButton.addEventListener('click', () => {
 
     if (currency <= 0){
         userBet.disabled = true;
+        throwButton.disabled = true;
         betOutcomeDisplay.textContent = 'You lost all your money, you fool!';
     }
 
@@ -64,6 +65,8 @@ resetButton.addEventListener('click', () => {
     currency = 50;
     userCurrency.textContent = `you have ${currency} dollars`;
     betOutcomeDisplay.textContent = '';
+    throwButton.disabled = false;
+    userBet.disabled = false;
     ++resets;
     messagesOutcome(resetButton);
     
