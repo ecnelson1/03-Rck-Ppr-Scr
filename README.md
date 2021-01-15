@@ -18,3 +18,20 @@ button for
 second button for
     -zeroing win/loss/total matches values
     -incrementing reset counter value on display 
+
+Stretch goal add betting: 
+    -HTML: 
+
+    display div - user money display
+    input - for bet amount
+    display for bet outcome
+
+    -js:
+
+    get the dom elements
+    get the bet amount from input
+    determine win/loss
+        - if win multiply by two then add back to money
+        - if loss subtract bet amount from user money
+    set display for bet outcome 
+    
